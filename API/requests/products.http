@@ -1,0 +1,103 @@
+@api = http://localhost:3000/api
+
+{{api}}/usuarios
+
+### Adicionar usuário
+POST {{api}}/usuarios
+Content-Type: application/json
+
+{
+  "nome_completo_usuario": "Nome Sobrenome",
+  "nome_usuario": "nome_usuario",
+  "senha_usuario": "senha",
+  "tipo_usuario": 1,
+  "data_nasc_usuario": "1990-01-01",
+  "telefone_usuario": "123456789"
+}
+
+### Obter usuário por ID
+GET {{api}}/usuarios/{id}
+
+### Excluir usuário por ID
+DELETE {{api}}/usuarios/{id}
+
+### Atualizar usuário por ID
+PUT {{api}}/usuarios/{id}
+Content-Type: application/json
+
+{
+    "nome_completo_usuario": "Nome Atualizado",
+    "nome_usuario": "novo_nome",
+    "senha_usuario": "nova_senha",
+    "tipo_usuario": 2,
+    "data_nasc_usuario": "1990-01-01",
+    "telefone_usuario": "987654321"
+}
+
+
+{{api}}/categorias
+
+### Adicionar categoria
+POST {{api}}/categorias
+Content-Type: application/json
+
+{
+  "nome_categoria": "Nome da Categoria",
+  "descricao_categoria": "Descrição da Categoria",
+  "url_imagem_categoria": "https://exemplo.com/imagem.jpg"
+}
+
+### Obter categoria por ID
+GET {{api}}/categorias/{id}
+
+### Excluir categoria por ID
+DELETE {{api}}/categorias/{id}
+
+### Atualizar categoria por ID
+PUT {{api}}/categorias/{id}
+Content-Type: application/json
+
+{
+    "nome_categoria": "Novo Nome da Categoria",
+    "descricao_categoria": "Nova Descrição da Categoria",
+    "url_imagem_categoria": "https://exemplo.com/nova-imagem.jpg"
+}
+
+
+{{api}}/noticias
+
+### Adicionar notícia
+POST {{api}}/noticias
+Content-Type: application/json
+
+{
+  "titulo_noticia": "Título da Notícia",
+  "descricao_noticia": "Descrição da Notícia",
+  "url_noticia": "https://exemplo.com/noticia",
+  "url_imagem_noticia": "https://exemplo.com/imagem.jpg",
+  "data_inicio_noti": "2024-04-19",
+  "data_fim_noti": "2024-04-20",
+  "usuario_id_usuario": 1,
+  "categoria_id_categoria": 1
+}
+
+### Obter notícia por ID
+GET {{api}}/noticias/{id}
+
+### Excluir notícia por ID
+DELETE {{api}}/noticias/{id}
+
+### Atualizar notícia por ID
+PUT {{api}}/noticias/{id}
+Content-Type: application/json
+
+{
+  "titulo_noticia": "Novo Título da Notícia",
+  "descricao_noticia": "Nova Descrição da Notícia",
+  "url_noticia": "https://exemplo.com/nova-noticia",
+  "url_imagem_noticia": "https://exemplo.com/nova-imagem.jpg",
+  "data_inicio_noti": "2024-04-19",
+  "data_fim_noti": "2024-04-20",
+  "usuario_id_usuario": 1,
+  "categoria_id_categoria": 1
+}
