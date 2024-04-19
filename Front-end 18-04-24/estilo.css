@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +24,6 @@ body {
 #area-logo {
     color: #f0e8e8;
     font-size: 2em;
-
 }
 
 /* Área do menu */
@@ -65,9 +63,9 @@ body {
 
 .menu-item a {
     display: block;
-     width: 100%;
+    width: 100%;
     height: 100%;
-        overflow: hidden;
+    overflow: hidden;
 }
 
 .menu-item img {
