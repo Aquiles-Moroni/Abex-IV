@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 
-import userRoutes from "./routes/usuarios.routes.js";
-//import categoryRoutes from "./routes/categorias.routes.js";
-import newsRoutes from "./routes/noticias.routes.js";
+import usuariosRotas from "./routes/usuarios.routes.js";
+import categoriaRoutes from "./routes/categorias.routes.js";
+import noticiasRotas from "./routes/noticias.routes.js";
 
 const app = express();
 
@@ -14,8 +14,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Routes
-app.use("/api", userRoutes);
-//app.use("/api", categoryRoutes);
-app.use("/api", newsRoutes);
+app.use("/api", usuariosRotas);
+app.use("/api", categoriaRoutes);
+app.use("/api", noticiasRotas);
 
 export default app;

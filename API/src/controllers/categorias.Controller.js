@@ -1,7 +1,7 @@
 import { getConnection, sql } from "../database/connection.js";
 
 // Função para obter todas as categorias
-export const getCategories = async (req, res) => {
+export const buscarCategoria = async (req, res) => {
     try {
         const pool = await getConnection();
         const result = await pool.request().query("SELECT * FROM Categoria");
@@ -12,7 +12,7 @@ export const getCategories = async (req, res) => {
 };
 
 // Função para criar uma nova categoria
-export const createCategory = async (req, res) => {
+export const criarCategoria = async (req, res) => {
     const { nome_categoria, descricao_categoria, url_imagem_categoria } = req.body;
 
     if (
@@ -48,7 +48,7 @@ export const createCategory = async (req, res) => {
 };
 
 // Função para obter uma categoria por ID
-export const getCategoryById = async (req, res) => {
+export const buscarCategoriaPorId = async (req, res) => {
     try {
         const pool = await getConnection();
 
@@ -64,7 +64,7 @@ export const getCategoryById = async (req, res) => {
 };
 
 // Função para deletar uma categoria por ID
-export const deleteCategoryById = async (req, res) => {
+export const deletarCategoriaPorId = async (req, res) => {
     try {
         const pool = await getConnection();
 
@@ -82,7 +82,7 @@ export const deleteCategoryById = async (req, res) => {
 };
 
 // Função para atualizar uma categoria por ID
-export const updateCategoryById = async (req, res) => {
+export const atualizarCategoriaPorId = async (req, res) => {
     const { nome_categoria, descricao_categoria, url_imagem_categoria } = req.body;
 
     if (

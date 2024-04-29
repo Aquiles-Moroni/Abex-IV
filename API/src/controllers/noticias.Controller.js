@@ -1,7 +1,7 @@
 import { getConnection, sql } from "../database/connection.js";
 
 // Função para obter todas as notícias
-export const getNews = async (req, res) => {
+export const buscarNoticias = async (req, res) => {
     try {
         const pool = await getConnection();
         const result = await pool.request().query("SELECT * FROM Cadastro_Noticia_Categoria");
@@ -12,7 +12,7 @@ export const getNews = async (req, res) => {
 };
 
 // Função para criar uma nova notícia
-export const createNews = async (req, res) => {
+export const criarNoticias = async (req, res) => {
     const {
         titulo_noticia,
         descricao_noticia,
@@ -57,7 +57,7 @@ export const createNews = async (req, res) => {
 };
 
 // Função para obter uma notícia por ID
-export const getNewsById = async (req, res) => {
+export const buscarNoticiasPorId = async (req, res) => {
     try {
         const pool = await getConnection();
 
@@ -73,7 +73,7 @@ export const getNewsById = async (req, res) => {
 };
 
 // Função para deletar uma notícia por ID
-export const deleteNewsById = async (req, res) => {
+export const daletarNoticiasPorId = async (req, res) => {
     try {
         const pool = await getConnection();
 
@@ -91,7 +91,7 @@ export const deleteNewsById = async (req, res) => {
 };
 
 // Função para atualizar uma notícia por ID
-export const updateNewsById = async (req, res) => {
+export const atualizarNoticiasPorId = async (req, res) => {
     const {
         titulo_noticia,
         descricao_noticia,

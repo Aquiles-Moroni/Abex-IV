@@ -1,7 +1,7 @@
 import { getConnection, sql } from "../database/connection.js";
 
 // Função para obter todos os usuários
-export const getUsers = async (req, res) => {
+export const buscarUsuario = async (req, res) => {
     try {
         const pool = await getConnection();
         const result = await pool.request().query("SELECT * FROM Usuario");
@@ -12,7 +12,7 @@ export const getUsers = async (req, res) => {
 };
 
 // Função para criar um novo usuário
-export const createUser = async (req, res) => {
+export const criarUsuario = async (req, res) => {
     const {
         nome_completo_usuario,
         nome_usuario,
@@ -64,7 +64,7 @@ export const createUser = async (req, res) => {
 };
 
 // Função para obter um usuário por ID
-export const getUserById = async (req, res) => {
+export const buscarUsuarioPorId = async (req, res) => {
     try {
         const pool = await getConnection();
 
@@ -80,7 +80,7 @@ export const getUserById = async (req, res) => {
 };
 
 // Função para deletar um usuário por ID
-export const deleteUserById = async (req, res) => {
+export const deletarUsuarioPorId = async (req, res) => {
     try {
         const pool = await getConnection();
 
@@ -98,7 +98,7 @@ export const deleteUserById = async (req, res) => {
 };
 
 // Função para atualizar um usuário por ID
-export const updateUserById = async (req, res) => {
+export const atualizarUsuarioPorId = async (req, res) => {
     const {
         nome_completo_usuario,
         nome_usuario,

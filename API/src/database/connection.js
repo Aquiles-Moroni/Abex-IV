@@ -2,13 +2,13 @@ import sql from 'mssql';
 
 // Configurações do banco de dados
 const dbConfig = {
-    user: 'seu_usuario',
-    password: 'sua_senha',
-    server: 'seu_servidor',
-    database: 'seu_banco_de_dados',
+    user: 'sa',
+    password: '**Senh4**',
+    server: 'localhost',
+    database: 'retro',
     options: {
-        encrypt: true, // Se estiver usando Azure
-        trustServerCertificate: true, // Altere para true em ambiente de desenvolvimento local / certificados autoassinados
+        encrypt: true,
+        trustServerCertificate: true,
     },
 };
 
@@ -23,5 +23,4 @@ export const getConnection = async () => {
     }
 };
 
-// Exporte o módulo SQL para ser usado em consultas
 export { sql };

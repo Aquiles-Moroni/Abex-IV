@@ -1,12 +1,12 @@
 import express from 'express';
-import * as newsController from '../controllers/noticias.Controller.js';
+import * as noticiasController from '../controllers/noticias.Controller.js';
 
 const router = express.Router();
 
-router.get('/news', newsController.getNews);
-router.post('/news', newsController.createNews);
-router.get('/news/:id', newsController.getNewsById);
-router.put('/news/:id', newsController.updateNewsById);
-router.delete('/news/:id', newsController.deleteNewsById);
+router.get('/noticias', noticiasController.buscarNoticias);
+router.post('/noticias', noticiasController.criarNoticias);
+router.get('/noticias/:id', noticiasController.buscarNoticiasPorId);
+router.put('/noticias/:id', noticiasController.atualizarNoticiasPorId);
+router.delete('/noticias/:id', noticiasController.daletarNoticiasPorId);
 
 export default router;
