@@ -86,7 +86,6 @@ body {
     width: 100%;
     color: #f0e8e8;
     font-size: 1.5em;
-    
 }
 
 #area-logo {
@@ -102,29 +101,6 @@ body {
     text-decoration: none;
     margin-top: 23px;
     margin-right: 10px;
-    
-}
-
-<<<<<<< HEAD
-#login {
-    position: absolute;
-    top: 10px; /* Ajustado para 10px do topo */
-    right: 10px; /* Posicionado 10px da direita */
-    color: #fff;
-    text-decoration: none;
-    margin-top: 23px;
-    margin-right: 10px;
-    
-=======
-.botaoLogin {
-    background-color: #df0202;
-    width: 25.4%;
-    height: 30%;
-    padding: 1px;
-    position: relative;
-    left: 727px;
-    top: 81px;
->>>>>>> 70e15ab2367eba0152b9adf1022dc649e3e84d51
 }
 
 /* Área do menu */
@@ -138,6 +114,16 @@ body {
     justify-content: center;
     align-items: center; /* Adicionado alinhamento vertical */
 }
+
+.botaoLogin {
+    position: absolute;
+    top: 50px;
+    right: 110px;
+    margin: 10px; /* Ajuste a margem conforme necessário */
+    background-color: #df0202;
+    color: #f0e8e8;
+}
+
 
 .menu-item {
     display: inline-block;
