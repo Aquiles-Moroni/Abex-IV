@@ -297,18 +297,37 @@ body {
     color: #fff; /* Adicione a cor do texto, se necessário */
 }
 
+
+.container {
+    width: 100%; /* Definir uma largura de 50% da página */
+    display: flex;
+    justify-content: space-between; /* Distribuir as divs igualmente na linha */
+    align-items: center; /* Centralizar verticalmente */
+}
+
 /* Seção Sobre Nós */
 #sobre-nos {
-    width: 100%; /* Tornar a div do mesmo tamanho que o carrossel */
-    max-width: 10000px; /* Definir uma largura máxima */
-    margin: 0 auto; /* Centralizar horizontalmente */
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+    width: 50%; /* Definir uma largura de 50% da página */
+    max-width: none; /* Remover a largura máxima */
+    margin: 0; /* Remover margens */
+    
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Alinhar os itens no canto esquerdo */
+    bottom: 0; /* Colocar no final da página */
+    left: 0; /* Colocar no canto esquerdo */
+}
+
+/* Vídeo */
+#video {
+    width: 50%; /* Definir uma largura de 50% da página */
+    max-width: none; /* Remover a largura máxima */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinhar os itens no canto esquerdo */
 }
 
 #sobre-nos h2 {
