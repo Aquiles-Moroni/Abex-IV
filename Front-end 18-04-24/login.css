@@ -3,7 +3,7 @@
     top: 20px;
     left: 20px;
     z-index: 9999; /* Garante que o botão fique acima de outros elementos */
-}
+} 
 
 #voltar-inicio {
     text-decoration: none;
@@ -18,25 +18,20 @@
     background-color: #e46767;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #816CFF 50%, #fff 50%);
+    /* CALLAI NÃO MEXE AQUI VIADO, VAI FUDER A HOMEEEEEEE! */ 
+    background: linear-gradient(135deg, #ffffff 50%, #fff 50%);
     border-radius: 30px, 50px, 100px;
 }
-
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-   
 }
-
-
-
 
 #login {
     background-color: #EDEDED;
@@ -48,30 +43,21 @@ body {
     border-radius: 50px;
     font-weight: bold;
     color: #000000;
-
-
 }
-
 
 #login h2 {
     margin-bottom: 20px;
     text-align: center;
-
-
 }
-
 
 .input-group {
     margin-bottom: 20px;
-   
 }
-
 
 .input-group label {
     display: block;
     margin-bottom: 5px;
 }
-
 
 .input-group input {
     width: 100%;
@@ -79,17 +65,12 @@ body {
     border-radius: 10px;
     border: 1px solid #D9D9D9;
     background-color: #D9D9D9;
-
-
 }
-
 
 .button-group {
     display: flex;
     justify-content: space-between;
- 
 }
-
 
 .button-group button {
     padding: 15px 30px;
@@ -106,7 +87,6 @@ body {
 
 #criar-conta {
     margin-left: 85px;
-
 }
 
 #esqueceu-senha:hover {
@@ -116,7 +96,6 @@ body {
 #esqueceu-senha{
     margin-right: 85px;
     padding: 15px;
-
 }
 
 #entrar:hover {
@@ -133,6 +112,3 @@ body {
     cursor: pointer;
     display: block;
 }
-
-
-

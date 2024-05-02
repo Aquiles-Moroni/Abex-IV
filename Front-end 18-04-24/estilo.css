@@ -115,13 +115,18 @@ body {
     align-items: center; /* Adicionado alinhamento vertical */
 }
 
-.botaoLogin {
+#botaoLogin a{
     position: absolute;
-    top: 50px;
-    right: 110px;
+    top: 20px;
+    right: 10px;
     margin: 10px; /* Ajuste a margem conforme necessário */
-    background-color: #df0202;
-    color: #f0e8e8;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none; /* Remover sublinhado */
+    font-size: 1.5em; /* Definir tamanho da fonte */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Mesma fonte do botão Criar Conta */
 }
 
 
@@ -208,7 +213,7 @@ body {
 
 .botao {
     position: absolute;
-    color: #7809f7cc;
+    color: #020003cc;
     padding: 10px;
     text-align: center;
     display: flex;
@@ -241,7 +246,7 @@ body {
 
 .marcadores div {
     transition: all 0.5s;
-    border: 3px solid #fa0808; 
+    border: 3px solid #000000; 
     padding: 6px;
     border-radius: 50%;
     margin-right: 15px;
@@ -249,12 +254,12 @@ body {
 }
 
 .marcadores div:hover {
-    background: #df0202;
+    background: #fa0000;
 }
 
 .imgAtual {
     transition: all 0.5s;
-    background: #f0f0f0;
+    background: #000000;
 }
 
 .legenda {
@@ -262,7 +267,7 @@ body {
     bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #816CFF;
+    background-color: #2f2d35;
     padding: 20px;
     color: #f0f0f0;
     border-radius: 0px;
@@ -301,16 +306,13 @@ body {
 .container {
     width: 100%; /* Definir uma largura de 50% da página */
     display: flex;
-    justify-content: space-between; /* Distribuir as divs igualmente na linha */
     align-items: center; /* Centralizar verticalmente */
 }
 
 /* Seção Sobre Nós */
 #sobre-nos {
-    width: 50%; /* Definir uma largura de 50% da página */
-    max-width: none; /* Remover a largura máxima */
-    margin: 0; /* Remover margens */
-    
+    width: 100%; /* Definir uma largura de 50% da página */
+    margin-right: 100px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -322,12 +324,14 @@ body {
 
 /* Vídeo */
 #video {
-    width: 50%; /* Definir uma largura de 50% da página */
-    max-width: none; /* Remover a largura máxima */
+    width: 100%; /* Definir uma largura de 50% da página */
     background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center; /* Alinhar os itens no canto esquerdo */
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 #sobre-nos h2 {
