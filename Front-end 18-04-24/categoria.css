@@ -61,12 +61,22 @@ body {
 
 }
 
+#noticia img {
+    width: 300px; /* Defina a largura desejada */
+    height: auto; /* Mantenha a proporção original da imagem */
+}
+
+
 #noticia h2 {
-    margin-bottom: 380px; /* Parte da check box */
+    margin-bottom: 210px; /* Parte da check box */
     text-align: center;
     color: #333; /* Cor do texto */
     position: relative;
 }   
+
+#noticia input {
+    margin-bottom: 10px; /* Ajuste para compensar o movimento do texto */
+}
 
 #dicasdesaude {
     background-color: #EDEDED;
@@ -83,12 +93,22 @@ body {
 }
 
 #dicasdesaude h4 {
-    margin-bottom: 390px;
+    margin-bottom: 190px;
     text-align: center;
     font-weight: bold;
     color: #333; /* Cor do texto */
     position: relative;
+    font-size: 20px;
 }   
+
+#dicasdesaude img {
+    width: 300px; /* Defina a largura desejada */
+    height: auto; /* Mantenha a proporção original da imagem */
+}
+
+#dicasdesaude input {
+    margin-bottom: 10px; /* Ajuste para compensar o movimento do texto */
+}
   
 #seguranca {
     background-color: #EDEDED;
@@ -105,13 +125,22 @@ body {
 }
 
 #seguranca h6 {
-    margin-bottom: 390px;
+    margin-bottom: 190px;
     text-align: center;
     font-weight: bold;
     color: #333; /* Cor do texto */
     position: relative;
+    font-size: 20px;
 }   
 
+#seguranca img {
+    width: 300px; /* Defina a largura desejada */
+    height: auto; /* Mantenha a proporção original da imagem */
+}
+
+#seguranca input {
+    margin-bottom: 10px; /* Ajuste para compensar o movimento do texto */
+}
 
 #avancar {
     background-color: #199E3E;
