@@ -10,7 +10,7 @@
     padding: 10px 20px;
     background-color: #199E3E;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: background-color 0.3s ease;
 }
 
@@ -23,7 +23,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #816CFF 50%, #fff 50%);
+    background-color: #6d5dc4;
     border-radius: 30px, 50px, 100px ;
     
 }
@@ -31,7 +31,7 @@ body {
 #titulo-categorias {
     color: rgb(0, 0, 0);
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0;
     content: " Passo 2/3";
 }
 
@@ -62,22 +62,11 @@ body {
 }
 
 #noticia h2 {
-    margin-bottom: 380px;
+    margin-bottom: 380px; /* Parte da check box */
     text-align: center;
     color: #333; /* Cor do texto */
     position: relative;
 }   
-
-
-#noticia h2::after {
-    font-size: 0.8em; /* Tamanho do texto do passo */
-    color: #eb8a8a; /* Cor do texto do passo */
-    top: 100%; /* Posicionando abaixo do título */
-    left: 0; /* Alinhando com a esquerda */
-    width: 100%; /* Utilizando a largura completa */
-    
-}
-
 
 #dicasdesaude {
     background-color: #EDEDED;
@@ -93,26 +82,14 @@ body {
     height: 350px;
 }
 
-#dicasdesaude h2 {
-    margin-bottom: 20px;
+#dicasdesaude h4 {
+    margin-bottom: 390px;
     text-align: center;
-    font-weight: normal; /* Removendo o negrito do título */
+    font-weight: bold;
     color: #333; /* Cor do texto */
     position: relative;
 }   
-
-
-#dicasdesaude h2::after {
-    font-size: 0.8em; /* Tamanho do texto do passo */
-    color: #eb8a8a; /* Cor do texto do passo */
-    position: absolute; /* Adicionando posicionamento absoluto */
-    top: 100%; /* Posicionando abaixo do título */
-    left: 0; /* Alinhando com a esquerda */
-    width: 100%; /* Utilizando a largura completa */
-    text-align: center; /* Centralizando o texto */
-}
-
-
+  
 #seguranca {
     background-color: #EDEDED;
     border-radius: 5px;
@@ -127,28 +104,13 @@ body {
     height: 350px;
 }
 
-#seguranca h2 {
-    margin-bottom: 20px;
+#seguranca h6 {
+    margin-bottom: 390px;
     text-align: center;
-    font-weight: normal; /* Removendo o negrito do título */
+    font-weight: bold;
     color: #333; /* Cor do texto */
     position: relative;
 }   
-
-
-#seguranca h2::after {
-    font-size: 0.8em; /* Tamanho do texto do passo */
-    color: #eb8a8a; /* Cor do texto do passo */
-    position: absolute; /* Adicionando posicionamento absoluto */
-    top: 100%; /* Posicionando abaixo do título */
-    left: 0; /* Alinhando com a esquerda */
-    width: 100%; /* Utilizando a largura completa */
-    text-align: center; /* Centralizando o texto */
-}
-
-
-
-
 
 
 #avancar {
@@ -164,4 +126,9 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#avancar:hover {
+    background-color: #e46767;
 }

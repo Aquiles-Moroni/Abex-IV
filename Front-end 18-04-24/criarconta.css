@@ -10,7 +10,7 @@
     padding: 10px 20px;
     background-color: #199E3E;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: background-color 0.3s ease;
 }
 
@@ -23,28 +23,22 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #816CFF 50%, #fff 50%);
+    background: linear-gradient(135deg, #816CFF , #555 );
     border-radius: 30px, 50px, 100px;
 }
 
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-   
-}
-
 #login {
-    background-color: #EDEDED;
+    background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 500px;
-    margin: 130px auto;
+    margin: 70px auto;
     padding: 20px;
     border-radius: 50px;
     font-weight: bold;
     color: #000000;
+
 }
 
 #login h2 {
@@ -53,12 +47,13 @@ body {
     font-weight: normal; /* Removendo o negrito do título */
     color: #333; /* Cor do texto */
     position: relative;
+    font-weight: bold;
 }
 
 #login h2::after {
     content: " Passo 1/3"; /* Adicionando o texto do passo */
     font-size: 0.8em; /* Tamanho do texto do passo */
-    color: #e91111; /* Cor do texto do passo */
+    color: #e46767; /* Cor do texto do passo */
     position: absolute; /* Adicionando posicionamento absoluto */
     top: 100%; /* Posicionando abaixo do título */
     left: 0; /* Alinhando com a esquerda */
