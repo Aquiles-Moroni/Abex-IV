@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta</title>
+    <link rel="stylesheet" href="gerenciar.css">
+</head>
+<body>
+    <section id="topo">
+        <a href="paginaInicial.html" id="voltar-inicio">Voltar ao Início</a>
+    </section>
+
+    <section id="gerenciar">
+
+        <h2 id="h2-titulo">Minha Conta</h2>
+        
+        <div class="input-group">
+            <label for="username">Nome:</label>
+            <input type="text" name="login" id="login" disabled="disabled" readonly="readonly" value="Guilherme">
+
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="login" id="login" disabled="disabled" readonly="readonly" value="Henrique">
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" name="login" id="login" disabled="disabled" readonly="readonly" value="(49) 999999-9999">
+        </div>
+
+        <h2 id="h2-titulo">Filtro de Categorias</h2>
+
+        <section id="filtro-gerenciar-saude">
+            <h4>Dicas de saúde</h4>
+            
+            <section id="filtro-noticias">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="categoria-noticias" name="categoria" value="noticias">
+                    <label for="categoria-noticias">Saúde mental</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="categoria-noticias" name="categoria" value="noticias">
+                    <label for="categoria-noticias">Saúde física</label>
+                </div> 
+
+            </section>
+        
+        </section>
+
+        <section id="filtro-gerenciar-seguranca">
+            <h4>Dicas de saúde</h4>
+            
+            <section id="filtro-noticias">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="categoria-noticias" name="categoria" value="noticias">
+                    <label for="categoria-noticias">Segurança digital</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="categoria-noticias" name="categoria" value="noticias">
+                    <label for="categoria-noticias">Segurança</label>  
+                </div>            
+            
+            
+            </section>
+        
+        </section>
+
+        <button id="salvar-categorias">Salvar</button>
+
+    </section>
+
+
+
+
+    <div id="rodape">
+        <p id="texto-rodape">© Copyright 2024 RetroTech. Todos os Direitos Reservados.</p>
+    </div>
+
+</body>
+</html>
