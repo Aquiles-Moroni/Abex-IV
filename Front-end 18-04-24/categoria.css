@@ -1,6 +1,6 @@
 #topo {
     position: fixed;
-    top: 20px;
+    top: 30px;
     left: 20px;
     z-index: 9999; /* Garante que o botão fique acima de outros elementos */
 }

@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #FFF;
+    background-color: #ce7d7d;
 }
 
 /* Botão Criar Conta */
@@ -307,6 +307,7 @@ body {
     width: 100%; /* Definir uma largura de 50% da página */
     display: flex;
     align-items: center; /* Centralizar verticalmente */
+    
 }
 
 /* Seção Sobre Nós */
