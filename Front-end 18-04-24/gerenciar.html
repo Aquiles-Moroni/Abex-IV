@@ -19,13 +19,13 @@
         
         <div class="input-group">
             <label for="username">Nome:</label>
-            <input type="text" name="login" id="login" disabled="disabled" readonly="readonly" value="Guilherme">
-
+            <input type="text" id="username" name="username" required>
+        
             <label for="sobrenome">Sobrenome:</label>
-            <input type="text" name="login" id="login" disabled="disabled" readonly="readonly" value="Henrique">
+            <input type="sobrenome" id="sobrenome" name="sobrenome" required>
 
-            <label for="telefone">Telefone:</label>
-            <input type="text" name="login" id="login" disabled="disabled" readonly="readonly" value="(49) 999999-9999">
+            <label for="sobrenome">Telefone:</label>
+            <input type="sobrenome" id="sobrenome" name="sobrenome" required>
         </div>
 
         <h2 id="h2-titulo">Filtro de Categorias</h2>
@@ -64,13 +64,8 @@
             </section>
         
         </section>
-
-        <button id="salvar-categorias">Salvar</button>
-
+        <button type="button" id="salvar" onclick="window.location.href='paginaInicial.html';">Salvar</button>
     </section>
-
-
-
 
     <div id="rodape">
         <p id="texto-rodape">© Copyright 2024 RetroTech. Todos os Direitos Reservados.</p>

@@ -78,7 +78,7 @@ body {
     color: #000000;
 }
 
-#salvar-categorias{
+#salvar{
     background-color: #199E3E;
     color: #fff;
     margin: 10px auto 0; /* Margem superior automática e zero para as laterais para centralizar o botão */
@@ -87,8 +87,12 @@ body {
     border-radius: 50px;
     cursor: pointer;
     display: block;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
     
+}
+
+#salvar:hover{
+    background-color: #e46767;
 }
 
 .input-group {

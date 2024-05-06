@@ -1,3 +1,26 @@
+/* Estilos para telas grandes */
+#noticia,
+#dicasdesaude,
+#seguranca {
+    width: 300px; /* Largura padrão para telas grandes */
+    margin: 130px 20px; /* Margem padrão */
+}
+
+/* Outras regras de estilo aqui */
+
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+    #noticia,
+    #dicasdesaude,
+    #seguranca {
+        width: 90%; /* Reduza a largura para caber em telas menores */
+        margin: 20px auto; /* Centralize o elemento na tela */
+    }
+
+    /* Adicione mais estilos conforme necessário */
+}
+
+
 #topo {
     position: fixed;
     top: 30px;
@@ -43,6 +66,13 @@ body {
     font-size: 0.8em; /* Você pode ajustar esse valor conforme necessário */
 }
 
+#filtrar-categorias {
+    padding: 15px 30px; /* Ajuste o preenchimento interno para aumentar o tamanho do botão */
+    font-size: 18px; /* Ajuste o tamanho da fonte para torná-la mais visível */
+    margin-top: -10px;
+}
+
+
 
 
 #noticia {
@@ -68,14 +98,14 @@ body {
 
 
 #noticia h2 {
-    margin-bottom: 210px; /* Parte da check box */
+    margin-bottom: 195px; /* Parte da check box */
     text-align: center;
     color: #333; /* Cor do texto */
     position: relative;
 }   
 
 #noticia input {
-    margin-bottom: 10px; /* Ajuste para compensar o movimento do texto */
+    margin-bottom: 20px; /* Ajuste para compensar o movimento do texto */
 }
 
 #dicasdesaude {
@@ -93,7 +123,7 @@ body {
 }
 
 #dicasdesaude h4 {
-    margin-bottom: 190px;
+    margin-bottom: 170px;
     text-align: center;
     font-weight: bold;
     color: #333; /* Cor do texto */
@@ -107,7 +137,7 @@ body {
 }
 
 #dicasdesaude input {
-    margin-bottom: 10px; /* Ajuste para compensar o movimento do texto */
+    margin-bottom: 20px; /* Ajuste para compensar o movimento do texto */
 }
   
 #seguranca {
@@ -125,7 +155,7 @@ body {
 }
 
 #seguranca h6 {
-    margin-bottom: 190px;
+    margin-bottom: 180px;
     text-align: center;
     font-weight: bold;
     color: #333; /* Cor do texto */
@@ -139,7 +169,7 @@ body {
 }
 
 #seguranca input {
-    margin-bottom: 10px; /* Ajuste para compensar o movimento do texto */
+    margin-bottom: 20px; /* Ajuste para compensar o movimento do texto */
 }
 
 #avancar {
