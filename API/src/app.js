@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 
+
 import usuariosRotas from "./routes/usuarios.routes.js";
 import categoriaRoutes from "./routes/categorias.routes.js";
 import noticiasRotas from "./routes/noticias.routes.js";

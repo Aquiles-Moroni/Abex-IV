@@ -5,7 +5,7 @@ const dbConfig = {
     user: 'sa',
     password: '**Senh4**',
     server: 'localhost',
-    database: 'retro',
+    database: 'Retrotech',
     options: {
         encrypt: true,
         trustServerCertificate: true,
@@ -13,7 +13,7 @@ const dbConfig = {
 };
 
 // Função para obter conexão com o banco de dados
-export const getConnection = async () => {
+export const buscarConexao = async () => {
     try {
         const pool = await sql.connect(dbConfig);
         return pool;

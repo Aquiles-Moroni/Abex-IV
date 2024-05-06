@@ -1,5 +1,9 @@
-CREATE DATABASE RetroTech;
-USE RetroTech;
+
+
+
+
+CREATE DATABASE retro;
+USE retro;
 
 -- Tabela: Usuario
 CREATE TABLE Usuario (
@@ -47,25 +51,25 @@ CREATE TABLE Usuario_Preferencia_Categoria (
 -- Populando a tabela Usuario
 INSERT INTO Usuario (nome_completo_usuario, nome_usuario, senha_usuario, tipo_usuario, data_nasc_usuario, telefone_usuario)
 VALUES
-('João da Silva', 'joaosilva', 'senha123', 1, '1990-01-01', '123456789'),
-('Maria Oliveira', 'mariaoliveira', 'senha456', 1, '1992-05-15', '987654321'),
-('Pedro Santos', 'pedrosantos', 'senha789', 1, '1985-07-20', '555666777'),
-('Ana Souza', 'anasouza', 'senha4', 2, '1978-09-10', '111222333'),
-('Carlos Pereira', 'carlospereira', 'senha5', 2, '2000-03-25', '999888777');
+('João da Silva', 'joaosilva', 'senha123', 1, '2000-01-01', '49988952148'),
+('Maria Oliveira', 'mariaoliveira', 'senha123', 1, '1998-05-15', '49988756321'),
+('Jorge Santos', 'jorgesantos', 'senha123', 1, '1985-07-20', '49991254787'),
+('Ana Souza', 'anasouza', 'senha123', 2, '1978-09-10', '49985632479'),
+('Carlos Pereira', 'carlospereira', 'senha123', 2, '1970-03-25', '49999931591');
 
 -- Populando a tabela Categoria
 INSERT INTO Categoria (nome_categoria, descricao_categoria, url_imagem_categoria)
 VALUES
-('Saúde', 'Notícias relacionadas à saúde', 'url_imagem_saude.jpg'),
-('Tecnologia', 'Últimas novidades em tecnologia', 'url_imagem_tecnologia.jpg'),
-('Notícias', 'Notícias gerais', 'url_imagem_noticias.jpg');
+('Saúde', 'Notícias relacionadas à saúde', 'www.link_da_imagem.com'),
+('Tecnologia', 'Últimas novidades em tecnologia', 'www.link_da_imagem.com'),
+('Notícias', 'Notícias gerais', 'www.link_da_imagem.com');
 
 
 -- Notícias relacionadas à Saúde
 INSERT INTO Cadastro_Noticia_Categoria (titulo_noticia, descricao_noticia, url_noticia, url_imagem_noticia, data_inicio_noti, data_fim_noti, usuario_id_usuario, categoria_id_categoria)
 VALUES
-('Benefícios da meditação para a saúde', 'Pesquisadores descobrem que a meditação regular pode reduzir o estresse.', 'https://exemplo.com/noticia1', 'url_imagem_noticia1.jpg', '2024-04-29', '2024-05-29', 1, 1),
-('Dieta rica em vegetais previne doenças', 'Pesquisa sugere que dietas ricas em vegetais podem reduzir o risco de doenças cardíacas.', 'https://exemplo.com/noticia2', 'url_imagem_noticia2.jpg', '2024-04-29', '2024-05-29', 2, 1);
+('Benefícios da meditação para a saúde', 'Pesquisadores descobrem que a meditação regular pode reduzir o estresse.', 'https://site_da_noticia.com', 'https://www.link_da_imagem.com', '2024-04-29', '2024-05-29', 1, 1),
+('Dieta rica em vegetais previne doenças', 'Pesquisa sugere que dietas ricas em vegetais podem reduzir o risco de doenças cardíacas.', 'https://site_da_noticia.com', 'https://www.link_da_imagem.com', '2024-04-29', '2024-05-29', 2, 1);
 
 -- Notícias relacionadas à Tecnologia
 INSERT INTO Cadastro_Noticia_Categoria (titulo_noticia, descricao_noticia, url_noticia, url_imagem_noticia, data_inicio_noti, data_fim_noti, usuario_id_usuario, categoria_id_categoria)
@@ -129,3 +133,6 @@ SELECT CNC.titulo_noticia, CNC.descricao_noticia, CNC.url_noticia, CNC.url_image
 FROM Cadastro_Noticia_Categoria AS CNC
 JOIN Usuario_Preferencia_Categoria AS UPC ON CNC.categoria_id_categoria = UPC.categoria_id_categoria
 WHERE UPC.usuario_id_usuario = 1;
+
+
+select * from Usuario_Preferencia_Categoria

@@ -3,4 +3,4 @@ import { PORT } from "./config.js";
 
 app.listen(PORT);
 
-console.log("Server ligado na porta: ", PORT);
+console.log("Servidor ON na porta: ", PORT);

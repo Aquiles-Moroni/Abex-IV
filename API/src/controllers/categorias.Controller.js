@@ -1,9 +1,9 @@
-import { getConnection, sql } from "../database/connection.js";
+import { buscarConexao, sql } from "../database/conexaoBanco.js";
 
 // Função para obter todas as categorias
 export const buscarCategoria = async (req, res) => {
     try {
-        const pool = await getConnection();
+        const pool = await buscarConexao();
         const result = await pool.request().query("SELECT * FROM Categoria");
         res.json(result.recordset);
     } catch (error) {
@@ -22,11 +22,11 @@ export const criarCategoria = async (req, res) => {
     ) {
         return res
             .status(400)
-            .json({ msg: "Bad Request. Please fill all fields" });
+            .json({ msg: "erro" });
     }
 
     try {
-        const pool = await getConnection();
+        const pool = await buscarConexao();
         const result = await pool
             .request()
             .input("nome_categoria", sql.VarChar, nome_categoria)
@@ -50,7 +50,7 @@ export const criarCategoria = async (req, res) => {
 // Função para obter uma categoria por ID
 export const buscarCategoriaPorId = async (req, res) => {
     try {
-        const pool = await getConnection();
+        const pool = await buscarConexao();
 
         const result = await pool
             .request()
@@ -66,7 +66,7 @@ export const buscarCategoriaPorId = async (req, res) => {
 // Função para deletar uma categoria por ID
 export const deletarCategoriaPorId = async (req, res) => {
     try {
-        const pool = await getConnection();
+        const pool = await buscarConexao();
 
         const result = await pool
             .request()
@@ -92,11 +92,11 @@ export const atualizarCategoriaPorId = async (req, res) => {
     ) {
         return res
             .status(400)
-            .json({ msg: "Bad Request. Please fill all fields" });
+            .json({ msg: "erro" });
     }
 
     try {
-        const pool = await getConnection();
+        const pool = await buscarConexao();
         const result = await pool
             .request()
             .input("id", req.params.id)

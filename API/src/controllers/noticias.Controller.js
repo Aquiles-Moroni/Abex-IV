@@ -1,9 +1,10 @@
-import { getConnection, sql } from "../database/connection.js";
+import { buscarConexao, sql } from "../database/conexaoBanco.js";
+import jwt from 'jsonwebtoken';
 
 // Função para obter todas as notícias
 export const buscarNoticias = async (req, res) => {
     try {
-        const pool = await getConnection();
+        const pool = await buscarConexao();
         const result = await pool.request().query("SELECT * FROM Cadastro_Noticia_Categoria");
         res.json(result.recordset);
     } catch (error) {
@@ -13,19 +14,27 @@ export const buscarNoticias = async (req, res) => {
 
 // Função para criar uma nova notícia
 export const criarNoticias = async (req, res) => {
-    const {
-        titulo_noticia,
-        descricao_noticia,
-        url_noticia,
-        url_imagem_noticia,
-        data_inicio_noti,
-        data_fim_noti,
-        usuario_id_usuario,
-        categoria_id_categoria
-    } = req.body;
+    const token = req.headers['authorization'];
+
+    if (!token) {
+        return res.status(403).json({ message: "Token de autenticação não fornecido" });
+    }
 
     try {
-        const pool = await getConnection();
+        const decoded = jwt.verify(token, 'seu_segredo'); // Verifica o token
+        // Se o token for válido, continua com a lógica de criação da notícia
+        const {
+            titulo_noticia,
+            descricao_noticia,
+            url_noticia,
+            url_imagem_noticia,
+            data_inicio_noti,
+            data_fim_noti,
+            usuario_id_usuario,
+            categoria_id_categoria
+        } = req.body;
+
+        const pool = await buscarConexao();
         const result = await pool
             .request()
             .input("titulo_noticia", sql.VarChar(45), titulo_noticia)
@@ -59,23 +68,31 @@ export const criarNoticias = async (req, res) => {
 // Função para obter uma notícia por ID
 export const buscarNoticiasPorId = async (req, res) => {
     try {
-        const pool = await getConnection();
+        const pool = await buscarConexao();
 
         const result = await pool
             .request()
-            .input("id", req.params.id)
-            .query("SELECT * FROM Cadastro_Noticia_Categoria WHERE id_noticia = @id");
+            .input("id", sql.Numeric(7), req.params.id)
+            .query(`
+                SELECT CNC.*, C.nome_categoria, C.descricao_categoria, C.url_imagem_categoria
+                FROM Cadastro_Noticia_Categoria AS CNC
+                JOIN Categoria AS C ON CNC.categoria_id_categoria = C.id_categoria
+                JOIN Usuario_Preferencia_Categoria AS UPC ON CNC.categoria_id_categoria = UPC.categoria_id_categoria
+                WHERE UPC.usuario_id_usuario = @id;
+            `);
 
-        return res.json(result.recordset[0]);
+        // Retorna todas as linhas do resultado
+        return res.json(result.recordset);
     } catch (error) {
         res.status(500).send(error.message);
     }
 };
 
+
 // Função para deletar uma notícia por ID
 export const deletarNoticiasPorId = async (req, res) => {
     try {
-        const pool = await getConnection();
+        const pool = await buscarConexao();
 
         const result = await pool
             .request()
@@ -92,19 +109,28 @@ export const deletarNoticiasPorId = async (req, res) => {
 
 // Função para atualizar uma notícia por ID
 export const atualizarNoticiasPorId = async (req, res) => {
-    const {
-        titulo_noticia,
-        descricao_noticia,
-        url_noticia,
-        url_imagem_noticia,
-        data_inicio_noti,
-        data_fim_noti,
-        usuario_id_usuario,
-        categoria_id_categoria
-    } = req.body;
+    const token = req.headers['authorization'];
+
+    if (!token) {
+        return res.status(403).json({ message: "Token de autenticação não fornecido" });
+    }
 
     try {
-        const pool = await getConnection();
+        const decoded = jwt.verify(token, 'seu_segredo'); // Verifica o token
+        // Se o token for válido, continua com a lógica de atualização da notícia
+
+        const {
+            titulo_noticia,
+            descricao_noticia,
+            url_noticia,
+            url_imagem_noticia,
+            data_inicio_noti,
+            data_fim_noti,
+            usuario_id_usuario,
+            categoria_id_categoria
+        } = req.body;
+
+        const pool = await buscarConexao();
         const result = await pool
             .request()
             .input("id", req.params.id)
