@@ -2,7 +2,7 @@
 #noticia,
 #dicasdesaude,
 #seguranca {
-    width: 300px; /* Largura padrão para telas grandes */
+    width: 3000px; /* Largura padrão para telas grandes */
     margin: 130px 20px; /* Margem padrão */
 }
 
@@ -13,12 +13,39 @@
     #noticia,
     #dicasdesaude,
     #seguranca {
-        width: 90%; /* Reduza a largura para caber em telas menores */
+        width: 80%; /* Reduza a largura para caber em telas menores */
         margin: 20px auto; /* Centralize o elemento na tela */
     }
 
     /* Adicione mais estilos conforme necessário */
 }
+
+.checkbox-group {
+    display: flex;
+    align-items: right;
+    margin-bottom: 0px; /* Espaçamento entre as checkbox */
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px; /* Espaçamento entre checkbox e rótulo */
+}
+
+.checkbox-group label {
+    margin: 0;
+}
+
+/* Adicione as regras de estilo dentro da media query para telas menores */
+@media screen and (max-width: 768px) {
+    .checkbox-group {
+        flex-direction: column; /* Empilhe verticalmente em telas menores */
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        margin-right: 0; /* Remova o espaçamento entre checkbox e rótulo */
+        margin-bottom: 5px; /* Espaçamento entre as checkbox */
+    }
+}
+
 
 
 #topo {
@@ -55,11 +82,11 @@ body {
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px 0;
-    content: " Passo 2/3";
+    content: " Passo 2/2";
 }
 
 #titulo-categorias::after {
-    content: " Passo 2/3";
+    content: " Passo 2/2";
     display: block;
     text-align: center;
     color: #eb8a8a;
