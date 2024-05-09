@@ -80,6 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 })
 
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     var buttonEntrar = document.getElementById('entrar');
     var mensagemSucesso = document.getElementById('mensagem-sucesso');
@@ -96,4 +99,6 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Usuário ou senha incorretos. Tente novamente.');
         }
     });
-}); 
+});
+
+;
