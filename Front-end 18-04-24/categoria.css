@@ -4,20 +4,39 @@
 #seguranca {
     width: 300px; /* Largura padrão para telas grandes */
     margin: 130px 20px; /* Margem padrão */
+    box-sizing: border-box; /* Adiciona padding e borda ao tamanho total */
 }
 
 /* Outras regras de estilo aqui */
 
+/* Media query para telas menores */
+@media screen and (max-width: 992px) {
+    #noticia,
+    #dicasdesaude,
+    #seguranca {
+        width: 90%; /* Reduza a largura para 90% da largura do dispositivo */
+        margin: 20px auto; /* Centralize o elemento na tela */
+        padding: 20px; /* Adicione preenchimento interno */
+        float: none; /* Remove o alinhamento flutuante */
+    }
+
+    /* Adicione mais estilos conforme necessário */
+}
+
+/* Media query para telas ainda menores */
 @media screen and (max-width: 768px) {
     #noticia,
     #dicasdesaude,
     #seguranca {
-        width: 100%; /* Altera a largura para ocupar 100% da largura do dispositivo */
-        margin: 20px auto; /* Centraliza o elemento na tela */
-        padding: 20px; /* Reduz o preenchimento interno */
+        width: 90%; /* Reduza a largura para 90% da largura do dispositivo */
+        margin: 20px auto; /* Centralize o elemento na tela */
+        padding: 20px; /* Adicione preenchimento interno */
         float: none; /* Remove o alinhamento flutuante */
     }
+
+    /* Adicione mais estilos conforme necessário */
 }
+
 
 
 .checkbox-group {
