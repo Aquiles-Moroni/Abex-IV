@@ -37,20 +37,6 @@
 }
 
 
-.checkbox-group {
-    display: flex;
-    align-items: right;
-    margin-bottom: 0px; /* Espaçamento entre as checkbox */
-}
-
-.checkbox-group input[type="checkbox"] {
-    margin-right: 10px; /* Espaçamento entre checkbox e rótulo */
-}
-
-.checkbox-group label {
-    margin: 0;
-}
-
 /* Adicione as regras de estilo dentro da media query para telas menores */
 @media screen and (max-width: 768px) {
     .checkbox-group {
@@ -63,7 +49,16 @@
     }
 }
 
+/* parte do check box */
+.checkbox-group input[type="checkbox"] {
+    margin-right: 35px; /* Espaçamento entre checkbox e rótulo */
+    transform: scale(3.5); /* Aumenta o tamanho da checkbox */
+}
 
+.checkbox-group label {
+    margin: 0;
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme desejado */
+}
 
 #topo {
     position: fixed;
@@ -110,14 +105,6 @@ body {
     font-size: 0.8em; /* Você pode ajustar esse valor conforme necessário */
 }
 
-#filtrar-categorias {
-    padding: 15px 30px; /* Ajuste o preenchimento interno para aumentar o tamanho do botão */
-    font-size: 18px; /* Ajuste o tamanho da fonte para torná-la mais visível */
-    margin-top: -10px;
-}
-
-
-
 
 #noticia {
     background-color: #EDEDED;
@@ -137,12 +124,11 @@ body {
 
 #noticia img {
     width: 300px; /* Defina a largura desejada */
-    height: auto; /* Mantenha a proporção original da imagem */
 }
 
 
 #noticia h2 {
-    margin-bottom: 195px; /* Parte da check box */
+    margin-bottom: 90px; /* Parte da check box */
     text-align: center;
     color: #333; /* Cor do texto */
     position: relative;
@@ -167,7 +153,7 @@ body {
 }
 
 #dicasdesaude h4 {
-    margin-bottom: 170px;
+    margin-bottom: 70px;
     text-align: center;
     font-weight: bold;
     color: #333; /* Cor do texto */
@@ -199,7 +185,7 @@ body {
 }
 
 #seguranca h6 {
-    margin-bottom: 180px;
+    margin-bottom: 80px;
     text-align: center;
     font-weight: bold;
     color: #333; /* Cor do texto */
@@ -208,8 +194,8 @@ body {
 }   
 
 #seguranca img {
-    width: 300px; /* Defina a largura desejada */
-    height: auto; /* Mantenha a proporção original da imagem */
+    width: 320px; /* Defina a largura desejada */
+    
 }
 
 #seguranca input {
