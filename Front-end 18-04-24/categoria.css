@@ -2,23 +2,23 @@
 #noticia,
 #dicasdesaude,
 #seguranca {
-    width: 3000px; /* Largura padrão para telas grandes */
+    width: 300px; /* Largura padrão para telas grandes */
     margin: 130px 20px; /* Margem padrão */
 }
 
 /* Outras regras de estilo aqui */
 
-/* Media query para telas menores */
 @media screen and (max-width: 768px) {
     #noticia,
     #dicasdesaude,
     #seguranca {
-        width: 80%; /* Reduza a largura para caber em telas menores */
-        margin: 20px auto; /* Centralize o elemento na tela */
+        width: 100%; /* Altera a largura para ocupar 100% da largura do dispositivo */
+        margin: 20px auto; /* Centraliza o elemento na tela */
+        padding: 20px; /* Reduz o preenchimento interno */
+        float: none; /* Remove o alinhamento flutuante */
     }
-
-    /* Adicione mais estilos conforme necessário */
 }
+
 
 .checkbox-group {
     display: flex;
