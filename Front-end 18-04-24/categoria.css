@@ -4,7 +4,6 @@
 #seguranca {
     width: 300px; /* Largura padrão para telas grandes */
     margin: 130px 20px; /* Margem padrão */
-    box-sizing: border-box; /* Adiciona padding e borda ao tamanho total */
 }
 
 /* Outras regras de estilo aqui */
@@ -14,9 +13,9 @@
     #noticia,
     #dicasdesaude,
     #seguranca {
-        width: 90%; /* Reduza a largura para 90% da largura do dispositivo */
+        width: 100%; /* Reduza a largura para ocupar 100% da largura do dispositivo */
         margin: 20px auto; /* Centralize o elemento na tela */
-        padding: 20px; /* Adicione preenchimento interno */
+        padding: 20px; /* Reduz o preenchimento interno */
         float: none; /* Remove o alinhamento flutuante */
     }
 
@@ -28,15 +27,14 @@
     #noticia,
     #dicasdesaude,
     #seguranca {
-        width: 90%; /* Reduza a largura para 90% da largura do dispositivo */
+        width: 100%; /* Reduza a largura para ocupar 100% da largura do dispositivo */
         margin: 20px auto; /* Centralize o elemento na tela */
-        padding: 20px; /* Adicione preenchimento interno */
+        padding: 20px; /* Reduz o preenchimento interno */
         float: none; /* Remove o alinhamento flutuante */
     }
 
     /* Adicione mais estilos conforme necessário */
 }
-
 
 
 .checkbox-group {
