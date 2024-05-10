@@ -113,10 +113,17 @@ body {
 }
 
 
+#texto-rodape {
+    margin: auto;
+    color: #fff; /* Adicione a cor do texto, se necessário */
+}
+
 #rodape {
     background: #816CFF;
     width: 100%;
-    height: 30px;
+    height: 36px;
     text-align: center;
+    position: relative;
+    display: flex;
     align-items: center;
 }
