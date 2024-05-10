@@ -52,12 +52,18 @@ export const buscarCategoriaPorId = async (req, res) => {
     try {
         const pool = await buscarConexao();
 
+        const usuarioId = req.params.usuario_id;
         const result = await pool
             .request()
-            .input("id", req.params.id)
-            .query("SELECT * FROM Categoria WHERE id_categoria = @id");
+            .input("usuario_id", usuarioId)
+            .query(`
+                SELECT c.*
+                FROM Usuario_Preferencia_Categoria upc
+                JOIN Categoria c ON upc.categoria_id_categoria = c.id_categoria
+                WHERE upc.usuario_id_usuario = @usuario_id;
+            `);
 
-        return res.json(result.recordset[0]);
+        res.json(result.recordset);
     } catch (error) {
         res.status(500).send(error.message);
     }

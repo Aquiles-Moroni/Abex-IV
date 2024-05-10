@@ -8,7 +8,8 @@ const router = express.Router();
 
 router.get('/categorias', verificarToken,categoriasController.buscarCategoria);
 router.post('/criarCategoria', verificarToken,verificarTipoUsuario(2),categoriasController.criarCategoria);
-router.get('/categorias/:id', verificarToken,verificarTipoUsuario(2),categoriasController.buscarCategoriaPorId);
+router.get('/categorias/:usuario_id', verificarToken,verificarTipoUsuario(2),categoriasController.buscarCategoriaPorId);
+
 router.put('/categorias/:id', verificarToken,verificarTipoUsuario(2),categoriasController.atualizarCategoriaPorId);
 router.delete('/categorias/:id', verificarToken,verificarTipoUsuario(2),categoriasController.deletarCategoriaPorId);
 

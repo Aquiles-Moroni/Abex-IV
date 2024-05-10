@@ -3,9 +3,9 @@ import sql from 'mssql';
 // Configurações do banco de dados
 const dbConfig = {
     user: 'sa',
-    password: '**Senh4**',
+        password: '**Senh4**',
     server: 'localhost',
-    database: 'Retrotech',
+    database: 'DBA',
     options: {
         encrypt: true,
         trustServerCertificate: true,

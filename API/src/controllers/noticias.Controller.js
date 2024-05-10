@@ -1,5 +1,7 @@
 import { buscarConexao, sql } from "../database/conexaoBanco.js";
 import jwt from 'jsonwebtoken';
+//import { segredo } from "../middleware/authMiddleware.js"; // Importa o segredo do arquivo
+const segredo = 'Senh4';
 
 // Função para obter todas as notícias
 export const buscarNoticias = async (req, res) => {
@@ -21,7 +23,7 @@ export const criarNoticias = async (req, res) => {
     }
 
     try {
-        const decoded = jwt.verify(token, 'seu_segredo'); // Verifica o token
+        const infoToken = jwt.verify(token,segredo); // Verifica o token
         // Se o token for válido, continua com a lógica de criação da notícia
         const {
             titulo_noticia,
@@ -116,7 +118,7 @@ export const atualizarNoticiasPorId = async (req, res) => {
     }
 
     try {
-        const decoded = jwt.verify(token, 'seu_segredo'); // Verifica o token
+        const infoToken = jwt.verify(token, segredo); // Verifica o token
         // Se o token for válido, continua com a lógica de atualização da notícia
 
         const {

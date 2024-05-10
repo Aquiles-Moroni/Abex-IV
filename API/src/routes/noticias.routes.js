@@ -8,6 +8,8 @@ const router = express.Router();
 
 router.get('/', noticiasController.buscarNoticias);
 router.get('/paginaInicial/:id', verificarToken, noticiasController.buscarNoticiasPorId);
+router.post('/criarNoticia',verificarToken, verificarTipoUsuario(2),noticiasController.criarNoticias);
+
 router.put('/noticias/:id', verificarToken, verificarTipoUsuario(2),noticiasController.atualizarNoticiasPorId);
 router.delete('/noticias/:id', verificarToken, verificarTipoUsuario(2),noticiasController.deletarNoticiasPorId);
 
