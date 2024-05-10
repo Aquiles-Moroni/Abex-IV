@@ -1,50 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar conta</title>
     <link rel="stylesheet" href="criarconta.css">
+    <script src="cadastro.js"></script>
 </head>
+
 <body>
     <section id="topo">
         <a href="paginaInicial.html" id="voltar-inicio">Voltar ao Início</a>
     </section>
-<!-- Formulário de Login -->
+
 <section id="login">
     <h2>Criar conta</h2>
     <form>
         <div class="input-group">
-            <label for="username">Nome:</label>
-            <input type="text" id="username" name="username" required>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
         
             <label for="sobrenome">Sobrenome:</label>
-            <input type="sobrenome" id="sobrenome" name="sobrenome" required>
+            <input type="text" id="sobrenome" name="sobrenome" required>
 
-            <label for="sobrenome">Telefone:</label>
-            <input type="sobrenome" id="sobrenome" name="sobrenome" required>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
             
-                <label for="senha">Senha:</label> 
-                <input type="senha" id="senha" name="senha" required>
+            <label for="senha">Senha:</label> 
+            <input type="password" id="senha" name="senha" required>
             
-                <label for="password-confirmation">Confirmar senha:</label>
-                <input type="password-confirmation" id="password-confirmation" name="password-confirmation" required>
-            </div>
-            <button id="entrar">Avançar</button>
+            <label for="confirmarSenha">Confirmar senha:</label>
+            <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+        </div>
+        <button type="submit" id="entrar">Avançar</button>
     </form>
-   
 </section>
 
 <div id="rodape">
     <p id="texto-rodape">© Copyright 2024 RetroTech. Todos os Direitos Reservados.</p>
 </div>
 
-<!-- Cabeçalho, Área de Busca, Área de Notícias, Categorias de Notícias -->
-<!-- Adicione aqui o conteúdo que você já tem no seu HTML -->
-
-
 </body>
 </html>
-
-
-
