@@ -1,48 +1,47 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("entrar").addEventListener("click", function(event) {
-        event.preventDefault(); // Evita que o formulário seja submetido normalmente
-        
-        // Captura os valores dos campos
-        var nome = document.getElementById("nome").value;
-        var sobrenome = document.getElementById("sobrenome").value;
-        var telefone = document.getElementById("telefone").value;
-        var senha = document.getElementById("senha").value;
-        var confirmarSenha = document.getElementById("confirmarSenha").value;
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
 
-        // Verifica se as senhas coincidem
+        // Validação personalizada (se necessário)
+        const senha = document.getElementById('senha').value;
+        const confirmarSenha = document.getElementById('confirmarSenha').value;
+
         if (senha !== confirmarSenha) {
-            alert("As senhas não coincidem.");
-            return; // Aborta o processo se as senhas não coincidirem
+            alert('As senhas não coincidem!');
+            return;
         }
 
-        // Crie um objeto com os dados capturados
-        var dados = {
-            nome: nome,
-            sobrenome: sobrenome,
-            telefone: telefone,
+        // Captura os dados do formulário e cria um objeto
+        const formData = {
+            nome: document.getElementById('nome').value,
+            sobrenome: document.getElementById('sobrenome').value,
+            telefone: document.getElementById('telefone').value,
+            email: document.getElementById('email').value,
             senha: senha
         };
 
-        // Aqui você pode enviar os dados para o backend
-        // Você pode usar fetch() ou XMLHttpRequest para isso
+        console.log('Dados do Formulário como Objeto:', formData);
 
-        // Exemplo com fetch()
-        fetch('url_do_seu_backend', {
+        // Envia os dados para o servidor usando fetch
+        fetch('http://localhost:3000/register', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json'
             },
-            body: JSON.stringify(dados),
+            body: JSON.stringify(formData)
         })
         .then(response => response.json())
         .then(data => {
             console.log('Sucesso:', data);
-            // Aqui você pode redirecionar o usuário para outra página após o cadastro ser concluído
-            // window.location.href = "pagina_de_sucesso.html";
+            alert('Dados enviados com sucesso!');
         })
         .catch((error) => {
             console.error('Erro:', error);
-            // Trate erros aqui, como exibir uma mensagem de erro para o usuário
+            alert('Houve um erro ao enviar os dados.');
         });
+
+        // Opcional: redirecionar para outra página
+        const proximaPagina = 'categoria.html'; // URL da próxima página
+        // window.location.href = proximaPagina;
     });
 });
