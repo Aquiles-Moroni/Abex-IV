@@ -5,44 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esqueceu a senha</title>
     <link rel="stylesheet" href="senha.css">
+    <script src="senha.js" defer></script>
+
 </head>
 <body>
     <section id="topo">
         <a href="paginaInicial.html" id="voltar-inicio">Voltar ao Início</a>
     </section>
-<!-- Formulário de Login -->
-<section id="login">
-    <h2>Esqueceu sua senha?</h2>
-    <form>
-        <div class="input-group">
-            <label for="username">Nome:</label>
-            <input type="text" id="username" name="username" required>
-        
-            <label for="sobrenome">Sobrenome:</label>
-            <input type="sobrenome" id="sobrenome" name="sobrenome" required>
+    <!-- Formulário de Login -->
+    <section id="login">
+        <h2>Esqueceu sua senha?</h2>
+        <form>
+            <div class="input-group">
+                <label for="username">Nome:</label>
+                <input type="text" id="username" name="username" required pattern="[a-zA-ZÀ-ú\s]+$">
             
-                <label for="telefone-senha">Telefone para recuperar a senha:</label>
-                <input type="telefone-senha" id="telefone-senha" name="telefone-senha" required>
-            
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome" required pattern="[a-zA-ZÀ-ú\s]+$">
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required pattern="\d{10,11}" placeholder="Formato: 49998263477">
+                
                 <label for="phone-confirmation">Confirmar telefone:</label>
-                <input type="phone-confirmation" id="phone-confirmation" name="phone-confirmation" required>
+                <input type="tel" id="phone-confirmation" name="phone-confirmation" required>
             </div>
             <button id="entrar">Confirmar</button>
-    </form>
-   
-</section>
+        </form>
+    </section>
 
+    <div id="rodape">
+        <p id="texto-rodape">© Copyright 2024 RetroTech. Todos os Direitos Reservados.</p>
+    </div>
 
-<div id="rodape">
-    <p id="texto-rodape">© Copyright 2024 RetroTech. Todos os Direitos Reservados.</p>
-</div>
-
-<!-- Cabeçalho, Área de Busca, Área de Notícias, Categorias de Notícias -->
-<!-- Adicione aqui o conteúdo que você já tem no seu HTML -->
-
-
+    
 </body>
 </html>
-
-
-
