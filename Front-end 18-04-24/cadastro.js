@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault(); // Impede o envio padrão do formulário
 
         // Validação personalizada (se necessário)
-        const senha = document.getElementById('senha').value;
+        const senha = document.getElementById('senha_usuario').value;
         const confirmarSenha = document.getElementById('confirmarSenha').value;
 
         if (senha !== confirmarSenha) {
@@ -13,17 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Captura os dados do formulário e cria um objeto
         const formData = {
-            nome: document.getElementById('nome').value,
-            sobrenome: document.getElementById('sobrenome').value,
-            telefone: document.getElementById('telefone').value,
-            email: document.getElementById('email').value,
-            senha: senha
+            nome_completo_usuario: document.getElementById('nome_completo_usuario').value,
+            nome_usuario: document.getElementById('nome_usuario').value,
+            telefone_usuario: document.getElementById('telefone_usuario').value,
+            tipo_usuario: document.getElementById('tipo_usuario').value,
+            data_nasc_usuario: document.getElementById('data_nasc_usuario').value,
+            senha_usuario: senha
         };
 
         console.log('Dados do Formulário como Objeto:', formData);
 
         // Envia os dados para o servidor usando fetch
-        fetch('http://localhost:3000/register', {
+        fetch('http://localhost:3000/api/criarConta', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

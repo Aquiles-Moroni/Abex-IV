@@ -49,7 +49,7 @@ export const criarUsuario = async (req, res) => {
     ) {
         return res
             .status(400)
-            .json({ message: "Bad Request. Please fill all fields" });
+            .json({ message: "Preencha todos os dados!" });
     }
 
     try {
