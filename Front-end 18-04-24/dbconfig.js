@@ -1,5 +1,5 @@
-// dbconfig.js
-const sql = require('mssql');
+// // dbconfig.js
+// const sql = require('mssql');
 
 /*
 const config = {
@@ -18,7 +18,14 @@ const config = {
     password: '',
     server: 'localhost\\SQLEXPRESS', 
     database: 'Teste_Tech_Cadastro' 
-};
+}; 
+
+// const config = {
+//     user: 'sa',
+//     password: '',
+//     server: 'localhost\\SQLEXPRESS', 
+//     database: 'Teste_Tech_Cadastro' 
+// };
 
 const poolPromise = new sql.ConnectionPool(config)
     .connect()

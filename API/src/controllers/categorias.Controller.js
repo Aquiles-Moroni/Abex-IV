@@ -8,7 +8,7 @@ export const buscarCategoria = async (req, res) => {
         res.json(result.recordset);
     } catch (error) {
         res.status(500).send(error.message);
-    }
+    } 
 };
 
 // Função para criar uma nova categoria
