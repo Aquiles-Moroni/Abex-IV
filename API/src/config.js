@@ -2,7 +2,8 @@ import { config } from "dotenv";
 config();
 
 export const PORT = process.env.PORT || 3000;
-export const DB_USER = process.env.DB_USER || "sa";
-export const DB_PASSWORD = process.env.DB_PASSWORD || "**Senh4**";
-export const DB_SERVER = process.env.DB_SERVER || "localhost:1433";
-export const DB_DATABASE = process.env.DB_DATABASE || "retro";
+export const DB_USER = process.env.DB_USER || "seu_usuario"; // Alterado para o usuário do PostgreSQL
+export const DB_PASSWORD = process.env.DB_PASSWORD || "sua_senha"; // Alterado para a senha do PostgreSQL
+export const DB_SERVER = process.env.DB_SERVER || "localhost"; // Removido o número de porta, já que o PostgreSQL usa a porta padrão 5432
+export const DB_PORT = process.env.DB_PORT || 5432; // Adicionado o número da porta do PostgreSQL
+export const DB_DATABASE = process.env.DB_DATABASE || "retro"; 

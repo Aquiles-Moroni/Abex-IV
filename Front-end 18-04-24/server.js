@@ -1,37 +1,38 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const { Pool } = require('pg');
+const app = express();
+const port = 3000;
 
-app.get('/', (req, res) => {
-
-var sqlserver = require('mssql');
-
-var con = sqlserver.createConnection({
-    user: "sa",
-    server: "localhost\\SQLEXPRESS", 
-    database: "Teste_Tech_Cadastro",
-    port: "1433"
+const pool = new Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'postgres',
+  password: 'postgres',
+  port: 5432,
 });
 
- con.connect(function(err) {
-  if (err) throw err;
-  con.query("SELECT * FROM dbo.Categoria", function (err, result) {
-    if (err) throw err;
-    for(let i=0;i<2;i++){
-        console.log(result[i].nome);}
+app.get('/', async (req, res) => {
+  try {
+    const client = await pool.connect();
+    const result = await client.query('SELECT * FROM categoria');
+    client.release();
+    
     res.setHeader('Content-Type', 'text/html');
-    res.write('<table border = 2><tr><td>Id:</td><td>Nome </td><td>Idade:</td></tr>');
-    for (let i =0; i < 2; i++) {
-        res.write('<h3><tr><td>' +  result[i].id + '</td><td>' + result[i].nome + '</td><td>' + result[i].idade + '</td></tr></h3>');
-      }
-      res.write('</table>');
-    res.end();
-  con.end();
-  console.log("Conexão fechada!!");
-  });
+    res.write('<table border = 2><tr><td>Id:</td><td>Nome:</td><td>Idade:</td></tr>');
+    
+    result.rows.forEach(row => {
+      res.write(`<tr><td>${row.id}</td><td>${row.nome}</td><td>${row.idade}</td></tr>`);
+    });
 
+    res.write('</table>');
+    res.end();
+
+  } catch (err) {
+    console.error('Erro ao executar a consulta', err);
+    res.status(500).send('Erro ao executar a consulta');
+  }
 });
-});
+
 app.listen(port, () => {
-    console.log('Example app listening at http://localhost:${port}')
-  })
+  console.log(`Example app listening at http://localhost:${port}`);
+}); 

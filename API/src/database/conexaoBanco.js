@@ -1,35 +1,19 @@
-import sql from 'mssql';
+import { Pool } from 'pg';
 
-// Configurações do banco de dados
-// const dbConfig = {
-//     user: 'sa',
-//     password: '**Senh4**',
-//     server: 'localhost:1433',
-//     database: 'retro',
-//     options: {
-//         encrypt: true,
-//         trustServerCertificate: true,
-//     },
-// };
-
+// Configurações do banco de dados PostgreSQL
 const dbConfig = {
-    user: 'sa',
-    password: '**Senh4**',
-    server: 'localhost',
-    port: 1433,
-    database: 'retro',
-    options: {
-        encrypt: true,
-        trustServerCertificate: true,
-    },
+    user: 'postgres',
+    password: 'postgres',
+    host: 'localhost',
+    port: 5432,
+    database: 'postgres',
 };
-
 
 // Função para obter conexão com o banco de dados
 export const buscarConexao = async () => {
     try {
-        const pool = await sql.connect(dbConfig);
-        console.log('SQL ON:');
+        const pool = new Pool(dbConfig);
+        console.log('Conexão com PostgreSQL estabelecida!');
         return pool;
     } catch (error) {
         console.error('Erro ao conectar ao banco de dados:', error);
@@ -37,4 +21,4 @@ export const buscarConexao = async () => {
     }
 };
 
-export { sql }; 
+export { Pool };
