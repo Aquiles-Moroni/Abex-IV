@@ -13,7 +13,7 @@ const dbConfig = {
 export const buscarConexao = async () => {
     try {
         const pool = new Pool(dbConfig);
-        console.log('Conexão com PostgreSQL estabelecida!');
+        console.log('Conexão com PostgreSQL estabelecida! Agora conectou!');
         return pool;
     } catch (error) {
         console.error('Erro ao conectar ao banco de dados:', error);
@@ -21,4 +21,4 @@ export const buscarConexao = async () => {
     }
 };
 
-export { Pool };
+export { Pool }; 
