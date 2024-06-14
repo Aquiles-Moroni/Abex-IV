@@ -24,6 +24,8 @@ const segredo = 'Senh4';
 //     }
 // };
 
+
+
 export const criarUsuario = async (req, res) => {
     const {
         nome_completo_usuario,
@@ -87,6 +89,13 @@ export const buscarUsuarioPorId = async (req, res) => {
         res.status(500).send(error.message);
     }
 };
+
+
+
+
+
+
+
 
 // export const atualizarUsuarioPorId = async (req, res) => {
 //     const { id } = req.params;

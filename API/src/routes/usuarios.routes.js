@@ -1,3 +1,4 @@
+
 import express from 'express';
 import * as usuarioController from '../controllers/usuarios.Controller.js';
 import { verificarToken } from "../middleware/authMiddleware.js"; //  middleware de validação do token
