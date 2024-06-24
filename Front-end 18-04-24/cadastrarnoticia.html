@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Notícia</title>
     <link rel="stylesheet" href="cadastrarnoticia.css">
+    <script src="cadastrarnoticia.js" defer></script>
 </head>
 <body>
     <section id="topo">
@@ -12,37 +13,28 @@
     </section>
 
     <section id="dados-noticias">
-
         <h2 id="h2-titulo">Cadastrar Notícia</h2>
+        <form id="cadastroNoticiaForm" enctype="multipart/form-data">
+            <div class="input-group">
+                <label for="titulo">Título Notícia:</label>
+                <input id="titulo" name="titulo" required>
 
-        <div class="input-group">
-            <label for="username">Título Notícia:</label>
-            <input id="username" name="username">
+                <label for="url">URL da Notícia:</label>
+                <input id="url" name="url" required>
 
-            <label for="sobrenome">URL da Notícia:</label>
-            <input id="sobrenome" name="sobrenome">
+                <label for="resumo">Resumo da notícia:</label>
+                <input id="resumo" name="resumo" required>
 
-            <label for="telefone">Resumo da notícia:</label>
-            <input type="tel" id="telefone" name="telefone">
-
-            <form>
                 <label for="imagem">Escolha uma imagem:</label>
                 <input type="file" id="imagem" name="imagem" accept="image/*">
-            </form>
-        
-            <script>
-                const uploadField = document.getElementById("imagem");
-            </script>
-
-            <button id="enviar">Publicar Notícia</button>
-
-        </div>
-
+                
+                <button type="submit" id="enviar">Publicar Notícia</button>
+            </div>
+        </form>
     </section>
 
     <div id="rodape">
         <p id="texto-rodape">© Copyright 2024 RetroTech. Todos os Direitos Reservados.</p>
     </div>
-
 </body>
 </html>

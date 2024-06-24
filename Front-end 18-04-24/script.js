@@ -101,4 +101,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+function verificarCadastroSucesso() {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith('cadastroSucesso=')) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// Função para exibir a mensagem de sucesso
+function exibirMensagemSucesso() {
+    const mensagemSucesso = document.getElementById('mensagem-sucesso');
+    if (mensagemSucesso) {
+        mensagemSucesso.style.display = 'block';
+    }
+}
+
+// Executa ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    if (verificarCadastroSucesso()) {
+        exibirMensagemSucesso();
+        // Remove o cookie após exibir a mensagem
+        document.cookie = 'cadastroSucesso=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    }
+});
+
 ;

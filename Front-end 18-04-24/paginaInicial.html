@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="criarconta.css">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
+    <script src="./paginaInicial.js"></script>
+    <script src="./login.js"></script>
+
+    
 </head>
 
 <body>
@@ -18,7 +23,7 @@
                 <a href="criarconta.html" id="criarconta" class="btn btn-one">
                     <span>Criar Conta</span>
                 </a>
-            </div>
+            </div>  
             <div id="area-logo">
                 <h1>Retro<span class="branco">Tech</span></h1>
             </div>
@@ -41,6 +46,19 @@
             </a>
         </div> 
     </div>    
+
+
+    <div id="mensagem-sucesso" style="display: none;">
+        <img src="imagens/sucesso.png" alt="Sucesso" style="width: 50px; height: 50px;">
+        <span>Cadastro realizado com sucesso!</span>
+    </div>
+
+
+    <!-- Ícone de usuário logado -->
+    <div id="icone-login" style="display: none;">
+        <i class="fas fa-user"></i> <!-- Ícone de usuário -->
+    </div>
+
 
 <!-- Primeiro slideshow -->
 <div class="slide" id="slideshow1">

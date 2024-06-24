@@ -2,14 +2,21 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('cadastroForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Impede o envio padrão do formulário
 
+        // Função auxiliar para obter o valor de um campo de formulário
+        function getFieldValue(id) {
+            const element = document.getElementById(id);
+            return element ? element.value : '';
+        }
+
         // Captura os dados do formulário e cria um objeto
         const formData = {
-            nome_completo_usuario: document.getElementById('nome_completo_usuario').value,
-            nome_usuario: document.getElementById('nome_usuario').value,
-            telefone_usuario: document.getElementById('telefone_usuario').value,
-            tipo_usuario: document.getElementById('tipo_usuario').value,
-            data_nasc_usuario: formatarData(document.getElementById('data_nasc_usuario').value), // Formate a data aqui
-            senha_usuario: document.getElementById('senha_usuario').value
+            nome_completo_usuario: getFieldValue('nome_completo_usuario'),
+            nome_usuario: getFieldValue('nome_usuario'),
+            telefone_usuario: getFieldValue('telefone_usuario'),
+            tipo_usuario: getFieldValue('tipo_usuario'),
+            data_nasc_usuario: formatarData(getFieldValue('data_nasc_usuario')), // Formate a data aqui
+            senha_usuario: getFieldValue('senha_usuario'),
+            foto_usuario: getFieldValue('foto_usuario') || 'caminho/padrao/para/imagem.png'
         };
 
         function formatarData(data) {
@@ -39,7 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.success) {
                 console.log('Sucesso:', data);
                 alert('Conta criada com sucesso!');
-                // Opcional: redirecionar para outra página após o cadastro
+                // Salva os dados do usuário em um cookie
+                document.cookie = `user=${encodeURIComponent(JSON.stringify(formData))}; path=/`;
+                // Redireciona para a página inicial
                 window.location.href = 'paginaInicial.html';
             } else {
                 console.error('Erro:', data.error);

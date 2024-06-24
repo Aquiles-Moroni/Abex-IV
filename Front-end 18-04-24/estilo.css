@@ -342,3 +342,37 @@ body {
 #sobre-nos p {
     line-height: 1.6;
 }
+
+
+#mensagem-sucesso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+#mensagem-sucesso img {
+    margin-right: 10px;
+}
+
+/* Em estilo.css ou em um bloco <style> no cabeçalho do HTML */
+#icone-login {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posição fixa na tela */
+    bottom: 20px; /* Distância do rodapé */
+    right: 20px; /* Distância da borda direita */
+    background-color: #ffffff; /* Cor de fundo */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 50%; /* Formato circular */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    z-index: 1000; /* Z-index elevado para estar sempre acima de outros elementos */
+}
+
+#icone-login i {
+    color: #333333; /* Cor do ícone */
+    font-size: 24px; /* Tamanho do ícone */
+}
