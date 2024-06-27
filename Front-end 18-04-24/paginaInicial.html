@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroTech</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="criarconta.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script src="./paginaInicial.js"></script>
+    <script src="./login.js"></script>
+
+    
+</head>
+
+<body>
+    <div id="area-cabecalho">
+            <div class="box-1">
+                <a href="criarconta.html" id="criarconta" class="btn btn-one">
+                    <span>Criar Conta</span>
+                </a>
+            </div>  
+            <div id="area-logo">
+                <h1>Retro<span class="branco">Tech</span></h1>
+            </div>
+    </div>
+
+    <div id="area-menu">
+        <div class="menu-item previsao">
+            <a href="https://www.climatempo.com.br/previsao-do-tempo/15-dias/cidade/374/chapeco-sc" target="_blank">
+                <img src="./imagens/menu/clima.jpeg" alt="Previsão do tempo">
+            </a>
+        </div>
+        <div class="menu-item unochapeco">
+            <a href="https://www.unochapeco.edu.br/" target="_blank">
+                <img src="./imagens/menu/uno.png" alt="Universidade Uno Chapecó">
+            </a>
+        </div>
+        <div id="botaoLogin">
+            <a href="login.html" class="btn btn-one">
+                <span>Login</span>
+            </a>
+        </div> 
+    </div>    
+
+
+    <div id="mensagem-sucesso" style="display: none;">
+        <img src="imagens/sucesso.png" alt="Sucesso" style="width: 50px; height: 50px;">
+        <span>Cadastro realizado com sucesso!</span>
+    </div>
+
+
+    <!-- Ícone de usuário logado -->
+    <div id="icone-login" style="display: none;">
+        <i class="fas fa-user"></i> <!-- Ícone de usuário -->
+    </div>
+
+
+<!-- Primeiro slideshow -->
+<div class="slide" id="slideshow1">
+    <div class="slides">
+        <div class="botao botao-voltar" id="voltar1">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="botao botao-proximo" id="proximo1">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <!-- Imagens do primeiro slideshow -->
+        <div class="imagem" id="imagem1">
+            <img src="./imagens/noticias/imagem1.jpg" alt="Imagem1"/>
+            <div class="legenda">
+                <h3>Casos de dengue aumentam</h3>
+                <p>Casos de dengue aumentam em chapecó.
+                    Cuide bem do ambiente onde está!
+                </p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+        <div class="imagem" id="imagem2">
+            <img src="./imagens/noticias/imagem2.jpg" alt="Imagem2"/>
+            <div class="legenda">
+                <h3>Segurança</h3>
+                <p>A segurança foi aumentada em chapecó.
+                    Mesmo assim, tome cuidado ao sair de casa! 
+                </p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+        <div class="imagem" id="imagem3">
+            <img src="./imagens/noticias/imagem3.jpg" alt="Imagem3"/>
+            <div class="legenda">
+                <h3>Nova contratação</h3>
+                <p>Mais novo jogador contratado pela equipe da chapecoense.</p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+        <div class="imagem" id="imagem4">
+            <img src="./imagens/noticias/imagem4.jpg" alt="Imagem4"/>
+            <div class="legenda">
+                <h3>Prefeitura de Chapecó recebe mudanças</h3>
+                <p>Forma realizadas algumas mudanças na cidade de chapecó nos últimos dias.</p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+
+        <!-- Marcadores de navegação do primeiro slideshow -->
+        <div class="marcadores">
+            <div class="imgAtual" id="0"></div>
+            <div id="1"></div>
+            <div id="2"></div>
+            <div id="3"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Segundo slideshow -->
+<div class="slide" id="slideshow2">
+    <div class="slides">
+        <div class="botao botao-voltar" id="voltar2">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="botao botao-proximo" id="proximo2">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <!-- Imagens do segundo slideshow -->
+        <div class="imagem" id="imagem5">
+            <img src="./imagens/saude/imagem1.jpg" alt="Imagem1"/>
+            <div class="legenda">
+                <h3>Dicas de Saúde</h3>
+                <p>Cuide bem da sua saúde.</p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+        <div class="imagem" id="imagem6">
+            <img src="./imagens/saude/imagem2.jpg" alt="Imagem2"/>
+            <div class="legenda">
+                <h3>Dicas de Saúde</h3>
+                <p>Pratique exercícios físicos.</p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+        <div class="imagem" id="imagem7">
+            <img src="./imagens/saude/imagem3.jpg" alt="Imagem3"/>
+            <div class="legenda">
+                <h3>Dicas de Saúde</h3>
+                <p>Beber água é de extrema importância.</p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+        <div class="imagem" id="imagem8">
+            <img src="./imagens/saude/imagem4.jpg" alt="Imagem4"/>
+            <div class="legenda">
+                <h3>Dicas de Saúde</h3>
+                <p>Sempre que estiver com algum problema, consulte um médico.</p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+        <!-- Adicione mais imagens conforme necessário -->
+
+        <!-- Marcadores de navegação do segundo slideshow -->
+        <div class="marcadores">
+            <div class="imgAtual" id="0"></div>
+            <div id="1"></div>
+            <div id="2"></div>
+            <div id="3"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Terceiro slideshow -->
+<div class="slide" id="slideshow3">
+    <div class="slides">
+        <div class="botao botao-voltar" id="voltar3">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="botao botao-proximo" id="proximo3">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <!-- Imagens do terceiro slideshow -->
+        <div class="imagem" id="imagem9">
+            <img src="./imagens/seguranca/imagem1.jpg" alt="Imagem1"/>
+            <div class="legenda">
+                <h3>Dicas de Segurança</h3>
+                <p>Fique sempre atento as Informações que são lhe repassadas.</p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+        <div class="imagem" id="imagem10">
+            <img src="./imagens/seguranca/imagem2.jpg" alt="Imagem2"/>
+            <div class="legenda">
+                <h3>Dicas de Segurança</h3>
+                <p>Proteja seus dados privados.</p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+        <div class="imagem" id="imagem11">
+            <img src="./imagens/seguranca/imagem3.jpg" alt="Imagem3"/>
+            <div class="legenda">
+                <h3>Dicas de Segurança</h3>
+                <p>Sempre fique atento!.</p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+        <div class="imagem" id="imagem12">
+            <img src="./imagens/seguranca/imagem4.jpg" alt="Imagem4"/>
+            <div class="legenda">
+                <h3>Dicas de Segurança</h3>
+                <p>Fique atento a golpes.</p>
+                <span>Data de Publicação: 27/06/2024</span>
+            </div>
+        </div>
+        <!-- Adicione mais imagens conforme necessário -->
+
+        <!-- Marcadores de navegação do terceiro slideshow -->
+        <div class="marcadores">
+            <div class="imgAtual" id="0"></div>
+            <div id="1"></div>
+            <div id="2"></div>
+            <div id="3"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Seção Sobre Nós -->
+    <div id="sobre-nos">
+        <h2>Sobre Nós</h2>
+        <p>Somos estudantes de Sistemas de Informação da Unochapecó, que tem como objetivo em nosso 4º Abex, realizar o desenvolvimento de um site especialmente para o público idoso, de facil navegação na internet sobre os assuntos que mais lhe interessam.</p>
+    </div>
+
+    <!-- Vídeo -->
+    <div id="video">
+        <!-- <img src="video/3204323.png" width="100px" height="100px"/> -->
+        <video width="500px" height="300px" controls>
+            <source src="video/contagem-regressiva-5-segundos.mp4" type="video/mp4" />
+        </video>
+    </div>
+</div>
+
+<div id="rodape">
+    <p id="texto-rodape">© Copyright 2024 RetroTech. Todos os Direitos Reservados.</p>
+</div>
+
+</body>
+</html>

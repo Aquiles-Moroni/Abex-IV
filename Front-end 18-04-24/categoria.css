@@ -1,0 +1,245 @@
+/* Estilos para telas grandes */
+#noticia,
+#dicasdesaude,
+#seguranca {
+    width: 300px; /* Largura padrão para telas grandes */
+    margin: 130px 20px; /* Margem padrão */
+}
+
+/* Outras regras de estilo aqui */
+
+/* Media query para telas menores */
+@media screen and (max-width: 992px) {
+    #noticia,
+    #dicasdesaude,
+    #seguranca {
+        width: 100%; /* Reduza a largura para ocupar 100% da largura do dispositivo */
+        margin: 20px auto; /* Centralize o elemento na tela */
+        padding: 20px; /* Reduz o preenchimento interno */
+        float: none; /* Remove o alinhamento flutuante */
+    }
+
+    /* Adicione mais estilos conforme necessário */
+}
+
+/* Media query para telas ainda menores */
+@media screen and (max-width: 768px) {
+    #noticia,
+    #dicasdesaude,
+    #seguranca {
+        width: 100%; /* Reduza a largura para ocupar 100% da largura do dispositivo */
+        margin: 20px auto; /* Centralize o elemento na tela */
+        padding: 20px; /* Reduz o preenchimento interno */
+        float: none; /* Remove o alinhamento flutuante */
+    }
+
+    /* Adicione mais estilos conforme necessário */
+}
+
+
+/* Adicione as regras de estilo dentro da media query para telas menores */
+@media screen and (max-width: 768px) {
+    .checkbox-group {
+        flex-direction: column; /* Empilhe verticalmente em telas menores */
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        margin-right: 0; /* Remova o espaçamento entre checkbox e rótulo */
+        margin-bottom: 5px; /* Espaçamento entre as checkbox */
+    }
+}
+
+/* parte do check box */
+.checkbox-group input[type="checkbox"] {
+    margin-right: 35px; /* Espaçamento entre checkbox e rótulo */
+    transform: scale(3.5); /* Aumenta o tamanho da checkbox */
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme desejado */
+}
+
+#topo {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    z-index: 9999; /* Garante que o botão fique acima de outros elementos */
+}
+
+#voltar-inicio {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #199E3E;
+    color: #fff;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+#voltar-inicio:hover {
+    background-color: #e46767;
+}
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6d5dc4;
+    border-radius: 30px, 50px, 100px ;
+    margin-bottom: 120px;
+    
+}
+
+#titulo-categorias {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+    content: " Passo 2/2";
+}
+
+#titulo-categorias::after {
+    content: " Passo 2/2";
+    display: block;
+    text-align: center;
+    color: #eb8a8a;
+    font-size: 0.8em; /* Você pode ajustar esse valor conforme necessário */
+}
+
+
+#noticia {
+    background-color: #EDEDED;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Reduzi a largura para caber no conteúdo */
+    margin: 130px 20px; /* Margem superior e lateral */
+    padding: 70px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: #000000;
+    float: left; /* Adicionando o alinhamento à esquerda */
+    margin-left: 60px;
+    height: 350px;
+
+}
+
+#noticia img {
+    width: 300px; /* Defina a largura desejada */
+}
+
+
+#noticia h2 {
+    margin-bottom: 90px; /* Parte da check box */
+    text-align: center;
+    color: #333; /* Cor do texto */
+    position: relative;
+}   
+
+#noticia input {
+    margin-bottom: 20px; /* Ajuste para compensar o movimento do texto */
+}
+
+#dicasdesaude {
+    background-color: #EDEDED;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Reduzi a largura para caber no conteúdo */
+    margin: 130px 20px; /* Margem superior e lateral */
+    padding: 70px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: #000000;
+    float: left; /* Adicionando o alinhamento à esquerda */
+    height: 350px;
+}
+
+#dicasdesaude h4 {
+    margin-bottom: 70px;
+    text-align: center;
+    font-weight: bold;
+    color: #333; /* Cor do texto */
+    position: relative;
+    font-size: 20px;
+}   
+
+#dicasdesaude img {
+    width: 300px; /* Defina a largura desejada */
+    height: auto; /* Mantenha a proporção original da imagem */
+}
+
+#dicasdesaude input {
+    margin-bottom: 20px; /* Ajuste para compensar o movimento do texto */
+}
+  
+#seguranca {
+    background-color: #EDEDED;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Reduzi a largura para caber no conteúdo */
+    margin: 130px 20px; /* Margem superior e lateral */
+    padding: 70px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: #000000;
+    float: left; /* Adicionando o alinhamento à esquerda */
+    height: 350px;
+}
+
+#seguranca h6 {
+    margin-bottom: 80px;
+    text-align: center;
+    font-weight: bold;
+    color: #333; /* Cor do texto */
+    position: relative;
+    font-size: 20px;
+}   
+
+#seguranca img {
+    width: 320px; /* Defina a largura desejada */
+    
+}
+
+#seguranca input {
+    margin-bottom: 20px; /* Ajuste para compensar o movimento do texto */
+}
+
+#avancar {
+    background-color: #199E3E;
+    color: #fff;
+    margin: 10px auto 0; /* Margem superior automática e zero para as laterais para centralizar o botão */
+    padding: 15px 80px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin-top: -0px;
+    position: fixed;
+    bottom: 35px;
+    right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#avancar:hover {
+    background-color: #e46767;
+}
+
+#texto-rodape {
+    margin: auto;
+    color: #fff; /* Adicione a cor do texto, se necessário */
+}
+
+
+#rodape {
+    background: #000000;
+    color: #fff; /* Cor do texto no footer */
+    padding: 10px; /* Reduza o espaçamento interno do footer */
+    text-align: center; /* Alinhamento do texto centralizado */
+    position: fixed; /* Posição fixa */
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    left: 0; /* Alinha o rodapé à esquerda */
+    width: 100%; /* Largura total */
+    height: 10px; /* Reduza a altura do footer */
+}
+

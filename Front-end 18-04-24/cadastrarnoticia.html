@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Notícia</title>
+    <link rel="stylesheet" href="cadastrarnoticia.css">
+    <script src="cadastrarnoticia.js" defer></script>
+
+    
+</head>
+<body>
+    <section id="topo">
+        <a href="paginaInicial.html" id="voltar-inicio">Voltar ao Início</a>
+    </section>
+
+    <section id="dados-noticias">
+        <h2 id="h2-titulo">Cadastrar Notícia</h2>
+        <label id="passo2">Passo 2/2:</label>
+
+        
+        <form id="cadastroNot" class="cadastroNot">
+            
+            <label for="titulo_noticia">Título Notícia:</label>
+            <input type="text" id="titulo_noticia" name="titulo_noticia">
+
+            
+            
+
+            <label for="url_noticia">URL da Notícia:</label>
+            <input type="url" id="url_noticia" name="url_noticia">
+
+            <label for="descricao_noticia">Descrição da notícia:</label>
+            <input type="text" id="descricao_noticia" name="descricao_noticia">
+
+            <label for="categoria_noticia">Categoria da Notícia:</label>
+            <select id="categoria_noticia" name="categoria_noticia" required>
+                <option value="">Selecione uma categoria</option>
+                <option value="saude">Saúde</option>
+                <option value="educacao">Educação</option>
+                <option value="seguranca">Segurança</option>
+            </select>
+
+            <label for="data_inicio_noti">Data de início:</label>
+            <input type="date" id="data_inicio_noti" name="data_inicio_noti" required>
+            
+            <label for="data_fim_noti">Data de fim:</label>
+            <input type="date" id="data_fim_noti" name="data_fim_noti" required>            
+
+            <button type="submit" id="submit">Publicar Notícia</button>
+        </form>
+    </section>
+
+    <div id="rodape">
+        <p id="texto-rodape">© Copyright 2024 RetroTech. Todos os Direitos Reservados.</p>
+    </div>
+</body>
+</html>
